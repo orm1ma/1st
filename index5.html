@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Projekt_5 -> Przeliczanie °C na K i na odwrót</title>
+    <link rel="stylesheet" href="./style5.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Przeliczanie temperatur</h1>
+    </header>
+    <main>
+        <section class="kelwiny">
+            <p>Przeliczanie °C na K:</p>
+            <input type="number" id="C" value="0">
+            <br>
+            <input type="submit" id="s1" value="sprawdź">
+            <br>
+            <span id="w1">wynik</span>
+        </section>
+        <section class="celsjusze">
+            <p>Przeliczanie K na °C:</p>
+            <input type="number" id="K" value="0">
+            <br>
+            <input type="submit" id="s2" value="sprawdź">
+            <br>
+            <span id="w2">wynik</span>
+        </section>
+    </main>
+    <div>
+        <img src="./grafika.png" id="obrazek">
+    </div>
+    <footer>
+        <h1>Maciej Ormian</h1>
+    </footer>
+    <!--JS script-->
+    <script>
+        const c = document.getElementById("C")
+        const k = document.getElementById("K")
+        const w1 = document.getElementById("w1")
+        const w2 = document.getElementById("w2")
+        const s1 = document.getElementById("s1")
+        const s2 = document.getElementById("s2")
+
+        function cnk(e){
+            e.preventDefault()
+            w1.innerText = parseFloat(c.value) + 273.15;
+        }
+
+        s1.addEventListener("click", cnk);
+
+        function knc(e){
+            e.preventDefault()
+            w2.innerText = parseFloat(k.value) - 273.15;
+        }
+
+        s2.addEventListener("click", knc);
+    </script>
+</body>
+</html>

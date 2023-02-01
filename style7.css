@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans';
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+header, footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    background-color: brown;
+}
+footer{
+    clear: both;
+}
+.box{
+    display: flex;
+    height: 500px;
+    width: 100%;
+}
+.dec{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    background-color: aquamarine;
+}
+.bin{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    background-color: chartreuse;
+}
+.klin{
+    width: 100%;
+    
+}
+.res{
+    font-size: larger;
+    font-weight: bold;
+    color: brown;
+}
+#wynik{
+    font-size: larger;
+    font-weight: bold;
+    margin-right: 5px;
+}

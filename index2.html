@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Projekt_2 -> prosty kalkulator</title>
+    <link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+    <header>
+        <h1>kalkulator</h1>
+    </header>
+    <section class="szary1">
+        <img id="zdj1" src="./Einstein.jpg" alt="Einstein">
+    </section>
+    <section class="zielony">
+        <form action="index2.html" method="post">
+            <input type="text" name="n_1" id="n_1" value="0">+
+            <input type="text" name="n_2" id="n_2" value="0">
+            <input type="submit" value="oblicz" name="submit" id="submit">=
+        </form>
+        <p id="sum"></p>
+        <form action="index2.html" method="post">
+            <input type="text" name="n_3" id="n_3" value="0">-
+            <input type="text" name="n_4" id="n_4" value="0">
+            <input type="submit" value="oblicz" name="submit_2" id="submit_2">=
+        </form>
+        <p id="substract"></p>
+    </section>
+    <section class="szary2">
+        <img id="zdj2" src="./sala_pc.jpg" alt="sala_pc">
+    </section>
+    <footer>
+        <h1>maciej ormian</h1>
+    </footer>
+    <!--Script JS-->
+    <script>
+        const n_1 = document.getElementById("n_1");
+        const n_2 = document.getElementById("n_2");
+        const sum = document.getElementById("sum");
+        const submit = document.getElementById("submit");
+
+        function dodaj(e){
+            e.preventDefault();
+            sum.innerHTML = parseFloat(n_1.value) + parseFloat(n_2.value);
+        }
+
+        submit.addEventListener("click", dodaj);
+
+        const n_3 = document.getElementById("n_3");
+        const n_4 = document.getElementById("n_4");
+        const substract = document.getElementById("substract");
+        const submit_2 = document.getElementById("submit_2");
+
+        function odejmij(e){
+            e.preventDefault();
+            substract.innerHTML = parseFloat(n_3.value) - parseFloat(n_4.value);
+        }
+
+        submit_2.addEventListener("click", odejmij);
+    </script>
+</body>
+</html>

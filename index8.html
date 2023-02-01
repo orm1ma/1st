@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projekt_8 -> Przyciski wywołujące różne eventy</title>
+    <link href="./style8.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="website icon" href="./world.png" type="png">
+    <meta charset="utf-8">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Trzy zdarzenia</h1>
+        </header>
+        <main>
+            <section>
+                <div class="square" id="k1">Naciśnij przycisk</div>
+                <div class="square" id="k2">Najedź na przycisk</div>
+                <div class="square" id="k3">Zjedź z przycisku</div>
+            </section>
+        </main>
+        <footer>
+            <h3>Maciej Ormian</h3>
+        </footer>
+    </div>
+
+    <!--JS script-->
+    <script>
+        const k1 = document.getElementById("k1");
+        const k2 = document.getElementById("k2");
+        const k3 = document.getElementById("k3");
+
+        let min = 0;
+        let max = 8;
+
+        const arr = ["#05ffda", "#a305ff", "#ab000b", "#d7e607", "#13cf02", "#873701", "#f04fa7", "#1f3300", "#ffffff"];
+
+        const colors = [0,0,0];
+
+        function random(){
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        function color(e){
+            if(k1.id === e.target.id) {
+                k1.style.backgroundColor = arr[random()];
+            }
+            if(k2.id === e.target.id) {
+                k2.style.backgroundColor = arr[random()];
+            }
+            if(k3.id === e.target.id) {
+                k3.style.backgroundColor = arr[random()];
+            }
+        }
+
+        k1.addEventListener('mousedown', color);
+
+        k2.addEventListener('mouseover', color);
+
+        k3.addEventListener('mouseout', color);
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Projekt_3 -> zaawansowany kalkulator</title>
+    <link rel="stylesheet" href="./style3.css">
+</head>
+<body>
+    <header>
+        <h1>kalkulator</h1>
+    </header>
+    <div>
+        <section class="tresc">
+            <form action="index3.html" method="post">
+                <input type="number" name="n_1" id="n_1" value="0">
+                <span id="dzialanie">?</span>
+                <input type="number" name="n_2" id="n_2" value="0">
+                <span id="rownasie">=</span>
+                <span id="wynik">?</span><br>
+                <input type="submit" value="oblicz" name="submit" id="submit">
+                <input type="reset" value="wyczyść" name="wyczysc" id="wyczysc">
+                <input type="reset" value="resetuj" name="reset" id="reset">
+                <br>
+                <input type="radio" name="dzialanie" id="+" value="+" checked>
+                <span id="dzialania">dodawanie</span><br>
+                <input type="radio" name="dzialanie" id="-" value="-">
+                <span id="dzialania">odejmowanie</span><br>
+                <input type="radio" name="dzialanie" id="*" value="*">
+                <span id="dzialania">mnożenie</span><br>
+                <input type="radio" name="dzialanie" id="/" value="/">
+                <span id="dzialania">dzielenie</span>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <h1>maciej ormian</h1>
+    </footer>
+    <!--Script JS-->
+    <script>
+        const dzialaniewartosc = document.getElementById("dzialanie")
+        const wynikwartosc = document.getElementById("wynik")
+        const sub = document.getElementById("submit")
+        const czysc = document.getElementById("wyczysc")
+        const res = document.getElementById("reset")
+        const wyn = document.getElementById("wynik")
+        const dzal = document.getElementById("dzialanie")
+        function oblicz(e){
+            e.preventDefault()
+            const dzialanie = document.querySelectorAll('input[name="dzialanie"]');
+            for(let i=0; i < dzialanie.length; i++){
+                if(dzialanie[i].checked){
+                    const a = document.getElementById("n_1")
+                    const b = document.getElementById("n_2")
+                    switch(dzialanie[i].value) {
+                    case "+":
+                        wyn.style.color = "#ffd60a";
+                        wyn.style.fontWeight = "bolder";
+                        wyn.innerText = (parseFloat(a.value) + parseFloat(b.value));
+                        dzal.innerText = ("+");
+                        break;
+                    case "-":
+                        wyn.innerText = (parseFloat(a.value) - parseFloat(b.value));
+                        dzal.innerText = ("-");
+                        break;
+                    case "*":
+                        wyn.innerText = (parseFloat(a.value) * parseFloat(b.value));
+                        dzal.innerText = ("*");
+                        break;
+                    case "/":
+                        if (b.value === "0"){
+                            wyn.innerText = ("NIE DZIEL PRZEZ ZERO !!!");
+                            dzal.innerText = ("/");
+                        }
+                        else {
+                            wyn.innerText = (parseFloat(a.value) / parseFloat(b.value));
+                            dzal.innerText = ("/");
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+        function czysc(){
+            wyn.innerText = (wynikwartosc.value);
+            dzal.innerText = (dzialaniewartosc.value);
+            a.value = ("default");
+            b.value = ("default");
+        }
+        function reset(){
+            location.reload()
+        }
+        sub.addEventListener("click", oblicz)
+        czysc.addEventListener("click", czysc)
+        res.addEventListener("click", reset)
+    </script>
+</body>
+</html>

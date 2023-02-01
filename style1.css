@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 1.2rem;
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
+header{
+    background-color: dodgerblue;
+    height: 100px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+footer{
+    background-color: dodgerblue;
+    height: 100px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+section{
+    height: 500px;
+}
+.czerwony{
+    background-color: crimson;
+    width: 30%;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+.zielony{
+    background-color: chartreuse;
+    width: 70%;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#a{
+    height: 100px;
+    width: 100px;
+    background-color: gold;
+    border-radius: 50%;
+    margin: 10px;
+}
+#b{
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+    border-radius: 50%;
+    margin: 10px;
+}
+#c{
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 10px;
+}
+#d{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 10px;
+}
+#e{
+    height: 100px;
+    width: 100px;
+    background-color: darkgreen;
+    border-radius: 50%;
+    margin: 10px;
+}
+#f{
+    height: 100px;
+    width: 100px;
+    background-color: darkblue;
+    border-radius: 50%;
+    margin: 10px;
+}
+.los{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: red;
+    font-weight: bolder;
+}
+.math{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #fff;
+}

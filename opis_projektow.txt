@@ -1,0 +1,12 @@
+Projekt_1 -> mechanizm losujący "lotto"
+Projekt_2 -> prosty kalkulator
+Projekt_3 -> zaawansowany kalkulator
+Projekt_4 -> warunek budowy trójkąta
+Projekt_5 -> przeliczanie °C na Kelwiny i na odwrót
+Projekt_6 -> generator ciągu
+Projekt_7 -> konwersja DEC - BIN
+Projekt_8 -> Przyciski wywołujące różne eventy
+Projekt_9 -> Prawa Murphy'ego, funkcja setInterval
+Projekt_10 -> Książki Tolkiena
+Projekt_11 -> zara obacze
+Projekt_12 -> próba mojej strony

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projekt_1 -> mechanizm losujący "lotto"</title>
+    <link rel="stylesheet" href="./style1.css"></head>
+<body>
+    <header>m. ormian</header>
+    <section class="czerwony"></section>
+    <section class="zielony">
+        <div id="a" class="los"></div>
+        <div id="b" class="los"></div>
+        <div id="c" class="los"></div>
+        <div id="d" class="los"></div>
+        <div id="e" class="los"></div>
+        <div id="f" class="los"></div>
+    </section>
+    <footer>
+        <div id="g" class="math"></div>
+        <div id="h" class="math"></div>
+        <div id="i" class="math"></div>
+        <div id="j" class="math"></div>
+        <div id="k" class="math"></div>
+    </footer>
+    <script>
+        const min = 1;
+        const max = 49;
+        a.innerText = (Math.floor(Math.random()*(max-min+1)+min));
+        b.innerText = (Math.floor(Math.random()*(max-min+1)+min));
+        c.innerText = (Math.floor(Math.random()*(max-min+1)+min));
+        d.innerText = (Math.floor(Math.random()*(max-min+1)+min));
+        e.innerText = (Math.floor(Math.random()*(max-min+1)+min));
+        f.innerText = (Math.floor(Math.random()*(max-min+1)+min));
+        const s = 100;
+        let l1 = (Math.floor(Math.random()*(s-min+1)+min));
+        let l2 = (Math.floor(Math.random()*(s-min+1)+min));
+        g.innerText = l1;
+        h.innerText = "*";
+        i.innerText = l2;
+        j.innerText = "=";
+        k.innerText = l1*l2;
+    </script>
+</body>
+</html>

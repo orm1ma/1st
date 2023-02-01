@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style6.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Projekt_6 -> generator ciągu</title>
+</head>
+<body>
+    <header>
+        <h1>generator ciągu</h1>
+    </header>
+    <main>
+        <form>
+            <div class="opis">
+                <p>Pierwszy element ciągu:</p>
+                <p>Różnica:</p>
+                <p>Długość ciągu:</p>
+                <input type="reset" value="odświerz" id="ref">
+            </div>
+            <div class="oper">
+                <input type="number" class="right" id="st"><br>
+                <input type="number" class="right" id="diff"><br>
+                <input type="number" class="right" id="length"><br>
+                <input type="submit" class="right" value="GENERUJ CIĄG" id="submit"><br>
+            </div>
+            <div class="res">
+                <span id="res">Wynik:</span>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <h1>maciej ormian</h1>
+    </footer>
+    <!--JS script-->
+    <script>
+        const sub = document.getElementById("submit");
+        const res = document.getElementById("res");
+        const ref = document.getElementById("ref");
+
+        function ciag(e){
+            e.preventDefault();
+            const st = parseInt(document.getElementById("st").value);
+            const dif = parseInt(document.getElementById("diff").value);
+            const len = parseInt(document.getElementById("length").value);
+            res.innerText = " Wynik: "
+            let temp = st;
+            for(let i=1; i <=len; i++){
+                res.innerText += ` ${temp}`;
+                temp += dif
+            }
+        }
+        
+        sub.addEventListener("click", ciag)
+
+        function refresh(){
+            location.reload();
+        }
+
+        ref.addEventListener("click", refresh)
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projekt_10 -> Książki Tolkiena</title>
+    <meta charset="utf-8">
+    <link href="./style10.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="website icon" href="./world.png" type="png">
+</head>
+<body>
+    <main>
+        <header><h1>Twórczość Tolkiena</h1></header>
+        <section>
+            <nav>
+                <ol>
+                    <li>„Hobbit: Niezwykła podróż”</li>
+                    <li>„Hobbit: Pustkowie Smauga”</li>
+                    <li>„Hobbit: Bitwa Pięciu Armii”</li>
+                    <li>„Władca Pierścieni: Drużyna Pierścienia”</li>
+                    <li>„Władca Pierścieni: Dwie wieże”</li>
+                    <li>„Władca Pierścieni: Powrót króla”</li>
+                    <li>„Silmarillion”</li>
+                </ol>
+            </nav>
+            <div>
+                <img src="./ksiazkitolkiena/hobbit1.JPG">
+            </div>
+        </section>
+        <small><h3>Maciej Ormian</h3></small>
+    </main>
+
+    <!--JS script-->
+    <script>
+        const img = document.getElementsByTagName("img")[0];
+
+        const tag = ["hobbit1", "hobbit2", "hobbit3", "wp1", "wp2", "wp3", "silmarillion"];
+
+        let los = 0;
+        
+        setInterval(losuj, 2000)
+
+        function losuj(){
+            los = Math.floor(Math.random() * tag.length);
+            console.log("./ksiazkitolkiena/" + tag[los] + ".JPG");
+            img.src = "./ksiazkitolkiena/" + tag[los] + ".JPG";
+        }
+    </script>
+</body>
+</html>

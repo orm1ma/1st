@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projekt_7 -> konwersja DEC - BIN</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style7.css">
+</head>
+<body>
+    <header>
+        <h1>konwersja DEC - BIN</h1>
+    </header>
+    <div class="box">
+        <div class="dec">
+            <h3>Konwersja na system binarny</h3>
+            <div class="klin"></div>
+            <input type="number" id="dec">
+            <div class="klin"></div>
+            <span id="wynik">Wynik:</span>
+            <span id="res1" class="res"></span>
+        </div>
+        <div class="bin">
+            <h3>Konwersja na system decymalny</h3>
+            <div class="klin"></div>
+            <input type="number" id="bin">
+            <div class="klin"></div>
+            <span id="wynik">Wynik:</span>
+            <span id="res2" class="res"></span>
+        </div>
+    </div>
+    <footer>
+        <h1>Maciej Ormian</h1>
+    </footer>
+    <!--JS script-->
+    <script>
+        function dnb(e){
+            let dec = parseInt(document.getElementById("dec").value);
+            let res1 = document.getElementById("res1");
+            e.preventDefault();
+            let bin2 = "";
+
+            if(isNaN(dec)){
+                dec = 0;
+            }
+
+            bin2 = dec.toString(2);
+            res1.innerText = bin2;
+        }
+
+        dec.addEventListener("change", dnb);
+
+        function bnd(e){
+            let dec2 = 0;
+            let bin = document.getElementById("bin").value;
+            let res2 = document.getElementById("res2");
+            if(isNaN(bin)){
+                bin = 0;
+            }
+            for(let i = 0; i < bin.length; i++) {
+                dec2 = (dec2 * 2) + parseInt(bin[i]);
+            }
+            dec2 = bin.toString(2);
+            res2.innerText = dec2;
+        }
+
+        bin.addEventListener("change", bnd);
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+body{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+#lewy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 50%;
+    border-color: blue;
+    border-width: 5px;
+}
+.wartosci{
+    height: 40px;
+    width: 150px;
+    margin: 5px;
+    border-radius: 5px;
+    border-width: 5px;
+    border-color: silver;
+
+}
+#submit{
+    height: 50px;
+    width: 230px;
+    margin: 5px;
+    border-radius: 15px;
+    border-width: 5px;
+    border-color: silver;
+    border-style: solid;
+    background-color: black;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+}
+#refresh{
+    height: 50px;
+    width: 230px;
+    margin: 5px;
+    border-radius: 15px;
+    border-width: 5px;
+    border-color: silver;
+    border-style: solid;
+    background-color: black;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+}
+#wynik{
+    text-transform: uppercase;
+    margin: 5px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    color: white;
+    border-color: blue;
+    border-width: 5px;
+}
+prawy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 50%;
+    border-color: white;
+    border-width: 5px;
+    border-style: solid;
+    background-color: aquamarine;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    color: white;
+}

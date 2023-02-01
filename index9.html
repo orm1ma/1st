@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projekt_9 -> Prawa Murphy'ego, funkcja setInterval</title>
+    <meta charset="utf-8">
+    <link href="./style9.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="website icon" href="./world.png" type="png">
+</head>
+<body>
+    <section>
+        <header><h1>Prawa Murphy'ego:</h1></header>
+        <main>
+            <img src="./colorwithtrees.png">
+            <span>Murphy's laws:</span>
+        </main>
+        <footer><h2>Maciej Ormian</h2></footer>
+    </section>
+    <!--JS script-->
+    <script>
+        //składnia set Interval(f(x), deley)
+        //funckja setInterval przyjmuje czas w ms
+        const laws = [
+            "Anything that can go wrong will go wrong.",
+            "Nothing is as easy as it looks.",
+            "Everything takes longer than you think it will.",
+            "If there is a possibility of several things going wrong, the one that will cause the most damage will be the one to go wrong.",
+            "If anything simply cannot go wrong, it will anyway.",
+            "Left to themselves, things tend to go from bad to worse.",
+            "If everything seems to be going well, you have obviously overlooked something.",
+            "Nature always sides with the hidden flaw.",
+            "Mother nature is a bitch.",
+            "Every solution breeds new problems.",
+            "If Murphy's Law can go wrong, it will.",
+            "Knowing Murphy's Law won't help either."
+        ];
+
+        let  tag = document.getElementsByTagName("span")[0];
+
+        let los = 0;
+
+        setInterval(losujcytat, 5000)
+
+        function losujcytat(){
+            los = Math.floor(Math.random() * laws.length);
+            tag.innerText = laws[los];
+        }
+
+        //zdjecia
+
+        let tag2 = document.getElementsByTagName("img")[0];
+
+        const photos = ["colorwithtrees", "colorbasic", "filled", "blankextended", "basic"];
+
+        let los2 = 0;
+
+        setInterval(losujzdjecie, 500)
+
+        function losujzdjecie(){
+            los2 = Math.floor(Math.random() * photos.length);
+            console.log("./" + photos[los2] + ".jpg");
+            tag2.src = "./" + photos[los2] + ".jpg";
+        }
+    </script>
+</body>
+</html>

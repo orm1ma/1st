@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans';
+}
+header{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.kelwiny{
+    background-color: blueviolet;
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+.celsjusze{
+    background-color: red;
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+div{
+    background-color: goldenrod;
+    height: 500px;
+    width: 50%;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+#obrazek{
+    height: 450px;
+}
+main{
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 50%;
+}
+#C{
+    height: 50px;
+    width: 350px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+#K{
+    height: 50px;
+    width: 350px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+#s1{
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    background-color: darkslategray;
+    border-style: groove;
+}
+#s2{
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    background-color: darkslategray;
+    border-style: groove;
+}

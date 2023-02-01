@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Projekt_4 -> Warunek budowy trójkąta</title>
+    <link rel="stylesheet" href="./style4.css">
+</head>
+<body>
+    <header>
+        <h1>Warunek budowy trójkata</h1>
+    </header>
+    <section id="lewy">
+        <input type="number" value="0" id="a" class="wartosci">
+        <input type="number" value="0" id="b" class="wartosci">
+        <input type="number" value="0" id="c" class="wartosci">
+        <br>
+        <input type="submit" value="sprawdź" id="submit">
+        <input type="reset" value="odśwież" id="refresh">
+        <br>
+        <span id="wynik">resultat</span>
+    </section>
+    <section id="prawy">
+        <img id="zdj2" src="./photo4.png" alt="trójkąt" color="white">
+    </section>
+    <footer>
+        <h1>Maciej Ormian</h1>
+    </footer>
+    <!--JS-->
+    <script>
+        const a = document.getElementById("a")
+        const b = document.getElementById("b")
+        const c = document.getElementById("c")
+        const sub = document.getElementById("submit")
+        const wyn = document.getElementById("wynik")
+        const ref = document.getElementById("refresh")
+
+        function sprawdz(e){
+            e.preventDefault();
+            if (parseFloat(a.value) >= parseFloat(b.value) && parseFloat(a.value) >= parseFloat(c.value) && parseFloat(b.value) + parseFloat(c.value) > parseFloat(a.value)) {
+                wyn.innerText = ("zrobisz z tego trójkąta");
+                console.log("stage1");
+            } else if (parseFloat(b.value) >= parseFloat(c.value) && parseFloat(a.value) + parseFloat(c.value) > parseFloat(b.value) && parseFloat(b.value) > parseFloat(a.value)) {
+                wyn.innerText = ("zrobisz z tego trójkąta");
+                console.log("stage2");
+            } else if (parseFloat(c.value) > parseFloat(b.value) && parseFloat(b.value) + parseFloat(a.value) > parseFloat(c.value)) {
+                wyn.innerText = ("zrobisz z tego trójkąta");
+                console.log("stage3");
+            } else {
+                wyn.innerText = ("nie zrobisz z tego trójkąta");
+            }
+        }
+        function odswiez(){
+            location.reload();
+            a.value = 0
+            b.value = 0
+            c.value = 0
+        }
+
+        sub.addEventListener("click", sprawdz)
+        ref.addEventListener("click", odswiez)
+    </script>
+</body>
+</html>
