@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>zadanie Pole Trójkąta</title>
+    <meta charset="utf-8">
+    <link href="./style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header><h1>Pole Trójkąta</h1></header>
+        <section>
+            <div class="left">
+                <form>
+                    <input type="number" class="variable" id="wys" placeholder="podaj wysokosc trojkata">
+                    <input type="number" class="variable" id="pod" placeholder="podaj podstawe trojkata">
+                    <input type="submit" class="cos" id="sub" value="oblicz">
+                    <input type="reset" class="cos" id="res" value="reset">   
+                    <span id="wynik">Wynik: </span> 
+                </form>
+            </div>
+            <div class="right">
+                <img src="./pole_tr.png" alt="zdjęcie trójkąta">
+            </div>
+        </section>
+        <small><h3>Maciej Ormian</h3></small>
+    </main>
+    
+    <!--JS script-->
+    <script>
+        const wys = document.getElementById("wys");
+        const wynik = document.getElementById("wynik");
+        const pod = document.getElementById("pod");
+        const sub = document.getElementById("sub");
+        const res = document.getElementById("res");
+
+        let wyn = 0;
+
+        function oblicz(e){
+            e.preventDefault()
+            if(isNaN(parseFloat(wys.value) * parseFloat(pod.value)) ||  parseFloat(wys.value) * parseFloat(pod.value) <= 0){
+                wynik.innerText="Podaj poprawne liczby!!!";
+            }
+            else{
+                wyn = parseFloat(wys.value) * parseFloat(pod.value) / 2;
+                wynik.innerText = "Wynik to: " + parseFloat(wyn);
+            }
+        }
+
+        sub.addEventListener("click", oblicz);
+
+        function czysc(){
+            wys.innerText=" ";
+            pod.innerText=" ";
+            wynik.innerText=" ";
+        }
+
+        res.addEventListener("click", czysc);
+    </script>
+</body>
+</html>

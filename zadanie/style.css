@@ -1,0 +1,40 @@
+body{
+    display: block;
+    flex-wrap: wrap;
+}
+#niebieski, #zolty{
+    height: 100px;
+    width: 100%;
+}
+#zielony, #ciemnycyjan{
+    height: 500px;
+    width: 25%;
+}
+#fioletowy, #czerwony{
+    width: 50%;
+    height: 250px;
+}
+#niebieski{
+    background-color: blue;
+    clear: both;
+}
+#zielony{
+    background-color: green;
+    float: left;
+}
+#fioletowy{
+    background-color: blueviolet;
+    display: flex;
+}
+#czerwony{
+    background-color: red;
+    display: flex;
+}
+#ciemnycyjan{
+    background-color: darkcyan;
+    float: right;
+}
+#zolty{
+    background-color: yellow;
+    clear: both;
+}
